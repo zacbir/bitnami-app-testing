@@ -1,0 +1,14 @@
+{
+    "test_suites": [
+	{
+	    "description": "Verifying installation configuration",
+	    "type": "unittest",
+	    "path": "tests.test_bitnami_docker_wordpress"
+	},
+	{
+	    "description": "Verifying installation accepting requests",
+	    "type": "casperjs",
+	    "path": "casperjs/bitnami-docker-wordpress.js"
+	}
+    ]
+}
