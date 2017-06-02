@@ -95,8 +95,8 @@ CasperJS test suites operate via normal HTTP boundaries, but have no notion of t
 
   - Rather than simple, one-off functions handling the two types of tests, I'd establish a richer class hierarchy that had more internal smarts for getting pertinent information from the environment to satisfy internal state. For instance, while Docker provides environment variables, and presumably other deployment tools do as well, I hoisted the hostname of the Docker deployment as a command line argument.
 
-  - Rather than a chain of `if/elif` tests, a registry to look up the appropriate per-test tool.
+  - Rather than a chain of `if/elif` tests, I'd provide a registry to look up the appropriate per-test tool.
 
   - Currently, we serially perform unit tests and then CasperJS tests, each siloed. Adapting either or both to a common set of test metadata would allow for a single output presentation for consistency and better analysis (aggregated tests run, aggregated successes and failures, &c). Perhaps using a common output style like Xunit, which would also then be ready for consumption by popular continuous integration tools.
 
-  - Provide for direct installation of the app in question, with appropriate cleanup afterwards. Currently, we only test deployed apps, and there is a non-zero chance that tests run (particularly anything that exercises the app) will leave behind unwanted persistent data.
+  - Provide for direct installation of the app in question, with appropriate cleanup afterwards. Currently, we only test deployed apps, and there is a non-zero chance that tests run (particularly anything that exercises the app) will either leave behind unwanted persistent data, or worse modify existing, precious data.
