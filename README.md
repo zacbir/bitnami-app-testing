@@ -87,6 +87,8 @@ CasperJS test suites operate via normal HTTP boundaries, but have no notion of t
 
   - Unit tests for apps may require resources pertinent to the deployment path of the app under test, so we change our working directory to the `deployment_path` for the duration of the unit test run. CasperJS tests, testing the specific host directly, have no such constraints.
 
+  - Deployed apps are reachable via network from the host running the tests.
+
 ## TODO
 
   - Rather than colocate all the recipes and tests (both unittest and CasperJS) with the tool, I'd provide a service where they could be looked up, freeing the need to deploy a new version every time new tests are created/updated.
