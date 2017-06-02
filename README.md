@@ -95,3 +95,4 @@ CasperJS test suites operate via normal HTTP boundaries, but have no notion of t
 
   - Currently, we serially perform unit tests and then CasperJS tests, each siloed. Adapting either or both to a common set of test metadata would allow for a single output presentation for consistency and better analysis (aggregated tests run, aggregated successes and failures, &c). Perhaps using a common output style like Xunit, which would also then be ready for consumption by common continuous integration tools.
 
+  - Provide for direct installation of the app in question, with appropriate cleanup afterwards. Currently, we only test deployed apps, and there is a non-zero chance that tests run (particularly anything that exercises the app) will leave behind unwanted persistent data.
