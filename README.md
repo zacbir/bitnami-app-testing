@@ -81,6 +81,8 @@ CasperJS test suites operate via normal HTTP boundaries, but have no notion of t
 
 ## Assumptions
 
+  - Dependencies are already installed and the app in question has already been deployed. In this case, `docker`, `CasperJS`, and the `bitnami-docker-wordpress` app.
+
   - For test suite recipes, we're assuming that all testable targets are consistently named `bitnami-{deployment platform}-{app name}`.
 
   - Unit tests for apps may require resources pertinent to the deployment path of the app under test, so we change our working directory to the `deployment_path` for the duration of the unit test run. CasperJS tests, testing the specific host directly, have no such constraints.
