@@ -81,7 +81,7 @@ CasperJS test suites operate via normal HTTP boundaries, but have no notion of t
 
 ## Assumptions
 
-  - Dependencies are already installed and the app in question has already been deployed. In this case, `docker`, `CasperJS`, and the `bitnami-docker-wordpress` app.
+  - Dependencies are already installed and the app in question has already been deployed. In this case, `VirtualBox`, `docker`, `CasperJS`, and the `bitnami-docker-wordpress` app.
 
   - For test suite recipes, we're assuming that all testable targets are consistently named `bitnami-{deployment platform}-{app name}`.
 
